@@ -1,0 +1,48 @@
+---
+import CustomHeading from "@/components/CustomHeading.astro";
+import ImageGallery from "@/components/functional-component/ImageGallery";
+import Base from "@/layouts/Base.astro";
+import { getListPage } from "@/lib/contentParser.astro";
+import { markdownify } from "@/lib/utils/textConverter";
+import CallToAction from "@/partials/CallToAction.astro";
+
+const gallery = await getListPage("gallery", "-index");
+if (gallery.data.draft) {
+  return Astro.redirect("/404");
+}
+const { title, subtitle, images } = gallery.data;
+---
+
+<Base {...gallery.data}>
+  <section class="section mt-24 sm:mt-20">
+    <div class="container relative gallery">
+      <div class="mb-16">
+        {
+          subtitle && (
+            <p
+              set:html={markdownify(subtitle)}
+              class="text-center text-primary text-base mb-6"
+              data-aos="fade-up-sm"
+            />
+          )
+        }
+        {
+          title && (
+            <CustomHeading
+              as="h1"
+              text={title}
+              class="text-center text-h2 md:text-h1"
+              dataAos="fade-up-sm"
+              dataAosDelay="50"
+            />
+          )
+        }
+      </div>
+
+      <div data-aos="fade-up-sm" data-aos-delay="150">
+        <ImageGallery images={images} client:load />
+      </div>
+    </div>
+  </section>
+  <CallToAction />
+</Base>

@@ -1,0 +1,58 @@
+---
+import BlogCard from "@/components/BlogCard.astro";
+import CustomHeading from "@/components/CustomHeading.astro";
+import Base from "@/layouts/Base.astro";
+import { getListPage, getSinglePage } from "@/lib/contentParser.astro";
+import { markdownify } from "@/lib/utils/textConverter";
+
+const blogIndex = await getListPage("blog", "-index");
+if (blogIndex.data.draft) {
+  return Astro.redirect("/404");
+}
+const { title, badge } = blogIndex.data;
+
+const blogs = await getSinglePage("blog");
+---
+
+<Base {...blogIndex.data}>
+  <section class="section mt-24 sm:mt-20">
+    <div class="container">
+      <div class="mx-auto text-center">
+        {
+          badge && (
+            <p
+              class="text-base text-primary mb-6"
+              data-aos="fade-up-sm"
+              set:html={markdownify(badge)}
+            />
+          )
+        }
+        {
+          title && (
+            <CustomHeading
+              as="h1"
+              text={title}
+              class="text-h2 md:text-h1 mb-16"
+              dataAos="fade-up-sm"
+              dataAosDelay="100"
+            />
+          )
+        }
+      </div>
+
+      <div class="row justify-center g-4">
+        {
+          blogs.map((blog, i) => (
+            <div
+              class="xl:col-4 md:col-6 col-12"
+              data-aos="zoom-in-sm"
+              data-aos-delay={`${i * 100}`}
+            >
+              <BlogCard blog={blog} index={i} />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</Base>

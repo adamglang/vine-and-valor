@@ -1,0 +1,20 @@
+---
+import Process from "@/components/services/Process.astro";
+import Service from "@/components/services/Service.astro";
+import Base from "@/layouts/Base.astro";
+import { getListPage, getSinglePage } from "@/lib/contentParser.astro";
+import CallToAction from "@/partials/CallToAction.astro";
+
+const services = await getListPage("services", "-index");
+if (services.data.draft) {
+  return Astro.redirect("/404");
+}
+const allServices = await getSinglePage("services");
+---
+
+<Base {...services.data}>
+  <Service serviceIndex={services.data} allServices={allServices} hero />
+  <Process process={services.data.process} />
+
+  <CallToAction />
+</Base>

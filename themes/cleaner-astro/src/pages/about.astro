@@ -1,0 +1,51 @@
+---
+import Pride from "@/components/about/Pride.astro";
+import Team from "@/components/about/Team.astro";
+import WhyUs from "@/components/about/WhyUs.astro";
+import CustomHeading from "@/components/CustomHeading.astro";
+import Base from "@/layouts/Base.astro";
+import { getListPage } from "@/lib/contentParser.astro";
+import { markdownify } from "@/lib/utils/textConverter";
+import CallToAction from "@/partials/CallToAction.astro";
+
+const aboutIndex = await getListPage("about", "-index");
+if (aboutIndex.data.draft) {
+  return Astro.redirect("/404");
+}
+const { title, subtitle, why_us, pride, team } = aboutIndex.data;
+---
+
+<Base {...aboutIndex.data}>
+  <section class="section mt-24 sm:mt-20" data-aos="fade-in-sm">
+    <div class="container">
+      <div>
+        {
+          subtitle && (
+            <p
+              class="text-primary text-base mb-6 text-center md:text-left"
+              set:html={markdownify(subtitle)}
+              data-aos="fade-up-sm"
+            />
+          )
+        }
+        {
+          title && (
+            <CustomHeading
+              as="h1"
+              text={title}
+              class="text-h2 lg:text-h1 text-balance text-center md:text-left"
+              dataAos="fade-up-sm"
+              dataAosDelay="50"
+            />
+          )
+        }
+      </div>
+    </div>
+  </section>
+
+  <WhyUs why_us={why_us} />
+  <Pride pride={pride} />
+  {team.enable && <Team team={team} />}
+
+  <CallToAction />
+</Base>
