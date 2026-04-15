@@ -33,7 +33,7 @@ function processStrongTags(htmlContent: string, svgColor: string) {
 }
 
 // Process the content
-const processedContent = processStrongTags(await markdownify(text), svgColor);
+const processedContent = await markdownify(text);
 
 // Prepare additional attributes
 const attributes = {
