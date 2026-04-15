@@ -1,12 +1,12 @@
 ---
 title: "Concrete Services <br> across **North Idaho**"
 meta_title: "Concrete Services in North Idaho | Vine & Valor Solutions"
-description: "Full-scope concrete contractor in Priest River, Idaho foundations, flatwork, stamped patios, retaining walls, excavation, and decorative concrete across the Panhandle."
+description: "Concrete contractor in Priest River, Idaho handling foundations, flatwork, stamped patios, retaining walls, excavation, and decorative concrete across the Panhandle."
 image: "/images/concrete/poured-concrete-shop-slab-foundation.webp"
 draft: false
 
 homepage_section_enable: true
-home_title: "Full-scope **concrete work** for home and job site"
+home_title: "**Concrete work** for homes and job sites, start to finish"
 subtitle: "A LICENSED IDAHO CONCRETE CONTRACTOR"
 descriptions:
   - "Vine & Valor Solutions pours foundations, driveways, stamped patios, retaining walls, and decorative flatwork across Priest River, Sandpoint, Priest Lake, Coeur d'Alene, Post Falls, and every town in between."

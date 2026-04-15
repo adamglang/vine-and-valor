@@ -220,27 +220,29 @@ const { title, meta_title, description, image, noindex, canonical } =
       import config from "@/config/config.json";
       const sticky_header = config.settings.sticky_header;
       const stickyNavInit = () => {
-        // fix header on 100px scroll and get back to normal on 90px scroll
-        const header = document.querySelector(".header");
-        let lastScroll = 0;
-        const onScroll = () => {
-          const currentScroll = window.scrollY;
-          if (
-            sticky_header &&
-            currentScroll > 300 &&
-            currentScroll > lastScroll &&
-            header
-          ) {
-            header.classList.add("header-reveal");
-            header.classList.remove("absolute");
-          } else if (currentScroll < 250 && header) {
-            header.classList.remove("header-reveal");
-            header.classList.add("absolute");
+        if (!sticky_header) return;
+        const cta = document.getElementById("header-cta");
+        const nav = document.getElementById("main-nav");
+        if (!cta || !nav) return;
+
+        let ticking = false;
+        const update = () => {
+          ticking = false;
+          const threshold = cta.offsetHeight;
+          if (window.scrollY >= threshold) {
+            nav.classList.add("is-stuck");
+          } else {
+            nav.classList.remove("is-stuck");
           }
-          lastScroll = currentScroll;
         };
-        window.addEventListener("scroll", onScroll);
-        onScroll(); // Check scroll position on page load
+        const onScroll = () => {
+          if (ticking) return;
+          ticking = true;
+          requestAnimationFrame(update);
+        };
+        window.addEventListener("scroll", onScroll, { passive: true });
+        window.addEventListener("resize", update);
+        update();
       };
 
       // aos

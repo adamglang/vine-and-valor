@@ -38,7 +38,7 @@ about:
 
 responsibility:
   enable: true
-  title: "The **full concrete scope** <br> from grade to final seal"
+  title: "**Every pour**, <br> from grade to final seal"
   subtitle: "WHAT WE DO"
   content: "Excavation, forming, and soil compaction. Foundations, slabs, and footings. Stamped and stained flatwork, retaining walls, fire pits, water features, and custom tile. Repair, resurfacing, and heated driveway systems for Idaho winters."
   image: "/images/concrete/polished-concrete-pole-barn-shop-floor.webp"
@@ -49,7 +49,7 @@ responsibility:
     - title: "Engineered for freeze-thaw"
       content: "Mix designs, control joints, and cure schedules tuned to Priest Lake winters so your slab, driveway, or foundation holds up season after season."
     - title: "A crew that finishes what we form"
-      content: "From layout to seal coat, the same team owns the pour. No subs handed a blank spec sheet just craftsmen who take pride in every edge."
+      content: "From layout to seal coat, the same team owns the pour. No subs handed a blank spec sheet — just craftsmen who take pride in every edge."
 
 customer:
   enable: false

@@ -10,9 +10,9 @@ weight: 10
 draft: false
 ---
 
-### The long tail of the concrete scope handled
+### The specialty work that keeps a job moving
 
-Not every concrete job is a driveway or a foundation. The work that keeps a project from stalling **pumping, waterproofing, reinforcement, ADA compliance, demolition and haul-off** is where the wrong contractor costs you weeks. Vine & Valor Solutions handles the full specialty scope so you don't have to hire out each line item.
+Not every concrete job is a driveway or a foundation. The work that keeps a project from stalling **pumping, waterproofing, reinforcement, ADA compliance, demolition and haul-off** is where the wrong contractor costs you weeks. Vine & Valor Solutions handles the specialty work in-house, so you don't have to line up a separate contractor for each one.
 
 ###### Specialty services
 
@@ -23,6 +23,6 @@ Not every concrete job is a driveway or a foundation. The work that keeps a proj
 - **Bollards, equipment pads, and enclosure pads** HVAC, generator, transformer, and trash enclosure pads poured to spec.
 - **Demolition and removal** existing concrete structures broken out, hauled off, and disposed of cleanly.
 
-###### A contractor that owns the full scope
+###### One contractor, start to finish
 
-One phone call, one contract, one crew. From the first demo breaker to the last coat of penetrating sealer, Vine & Valor stands behind the entire concrete package.
+One phone call, one contract, one crew. From the first demo breaker to the last coat of penetrating sealer, Vine & Valor stands behind every step of the concrete work.

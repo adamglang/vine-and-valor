@@ -7,6 +7,8 @@ import menu from "@/config/menu.json";
 import DynamicIcon from "@/helpers/DynamicIcon";
 import { markdownify } from "@/lib/utils/textConverter";
 
+const { params } = config as any;
+
 export interface ChildNavigationLink {
   name: string;
   url: string;
@@ -26,6 +28,7 @@ const { pathname } = Astro.url;
 
 <header class="header z-50 absolute top-0 w-full">
   <div
+    id="header-cta"
     class="flex flex-col sm:flex-row justify-center items-center max-sm:gap-0 gap-4.5 w-full bg-primary py-2"
     data-aos="fade-down-sm">
     <p
@@ -39,7 +42,7 @@ const { pathname } = Astro.url;
     </a>
   </div>
 
-  <div class="w-full bg-body/95 backdrop-blur-md shadow-sm">
+  <div id="main-nav" class="w-full bg-body/95 backdrop-blur-md shadow-sm">
     <nav class="navbar mx-auto max-w-[1356px]! px-[30px]">
       <!-- logo -->
       <div class="order-0" data-aos="zoom-in" data-aos-delay="20">
@@ -57,6 +60,14 @@ const { pathname } = Astro.url;
             />
           )
         }
+
+        <!-- stuck-state phone button (mobile only) -->
+        <a
+          href={`tel:${params.contact_phone_tel}`}
+          aria-label={`Call ${params.contact_phone}`}
+          class="nav-phone order-2 items-center justify-center bg-primary p-2 rounded text-text-light hidden lg:hidden!">
+          <DynamicIcon icon="FaPhone" className="h-5 w-5" />
+        </a>
 
         <!-- navbar toggler -->
         <input id="nav-toggle" type="checkbox" class="hidden" />

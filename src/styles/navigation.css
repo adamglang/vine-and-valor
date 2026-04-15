@@ -43,16 +43,10 @@
   }
 }
 
-.header-reveal {
-  animation: slide-in-header 0.5s ease;
-  @apply fixed bg-body !top-0 backdrop-blur-lg shadow;
+#main-nav.is-stuck {
+  @apply fixed left-0 right-0 top-0 bg-body backdrop-blur-lg shadow;
 }
 
-@keyframes slide-in-header {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(0);
-  }
+#main-nav.is-stuck .nav-phone {
+  @apply flex! lg:hidden!;
 }

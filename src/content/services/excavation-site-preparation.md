@@ -14,7 +14,7 @@ draft: false
 
 Every concrete failure we've ever been called to fix started below the slab. Vine & Valor Solutions handles the **site preparation, excavation, grading, forming, and soil compaction** that make the rest of the pour possible across the whole North Idaho service area.
 
-###### Site prep scope
+###### What site prep covers
 
 - **Excavation and over-dig** for foundations, shops, slabs, and walls.
 - **Grading to plan** rough and finish grade, with proper slope for drainage.

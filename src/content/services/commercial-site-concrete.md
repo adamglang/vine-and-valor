@@ -14,7 +14,7 @@ draft: false
 
 Commercial work lives and dies on schedule. Vine & Valor Solutions brings residential-grade craft to **commercial foundations, tilt-wall panels, loading docks, dumpster pads, curb and gutter, parking lot concrete, polished floors, and municipal site concrete** across North Idaho.
 
-###### Commercial scope
+###### What we handle commercially
 
 - **Foundations and footings** for new construction, tenant improvements, and additions.
 - **Tilt-up and tilt-wall panels** for shops, warehouses, and industrial buildings.
