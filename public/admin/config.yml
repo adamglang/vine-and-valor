@@ -1,0 +1,545 @@
+backend:
+  name: github
+  repo: adamglang/vine-and-valor
+  branch: main
+
+# To preview/test CMS changes locally without writing to GitHub,
+# run `npx decap-server` in a separate terminal and uncomment:
+# local_backend: true
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+site_url: https://vineandvalorsolutions.com
+display_url: https://vineandvalorsolutions.com
+logo_url: /images/logos/vine-and-valor-horizontal-logo-dark-v2.png
+
+publish_mode: editorial_workflow
+
+collections:
+  # ────────────────────────────────────────────────────────────────
+  # SITE-WIDE SETTINGS
+  # ────────────────────────────────────────────────────────────────
+  - name: "settings"
+    label: "Site Settings"
+    description: "Global site metadata, contact info, and header/footer configuration."
+    editor:
+      preview: false
+    files:
+      - name: "site_config"
+        label: "Site Configuration"
+        file: "src/config/config.json"
+        format: "json"
+        fields:
+          - label: "Site"
+            name: "site"
+            widget: "object"
+            fields:
+              - { label: "Browser Tab Title", name: "title", widget: "string", hint: "Appears in the browser tab and Google results." }
+              - { label: "Base URL", name: "base_url", widget: "string", hint: "Full site URL including https://." }
+              - { label: "Base Path", name: "base_path", widget: "string", default: "/", hint: "Usually just /." }
+              - { label: "Trailing Slash", name: "trailing_slash", widget: "boolean", default: false }
+              - { label: "Favicon", name: "favicon", widget: "image", hint: "Small icon shown in browser tabs. Square PNG, 64×64 or 128×128." }
+              - { label: "Header Logo", name: "logo", widget: "image", hint: "Logo shown in the top navigation." }
+              - { label: "Footer Logo", name: "footer_logo", widget: "image", hint: "Logo shown in the footer." }
+              - { label: "Logo Width (px)", name: "logo_width", widget: "string", default: "220" }
+              - { label: "Logo Height (px)", name: "logo_height", widget: "string", default: "60" }
+              - { label: "Logo Alt Text", name: "logo_text", widget: "string", hint: "Read aloud by screen readers in place of the logo image." }
+
+          - label: "Header / Display Settings"
+            name: "settings"
+            widget: "object"
+            fields:
+              - { label: "Sticky Header", name: "sticky_header", widget: "boolean", default: true, hint: "Keep the header visible as the page scrolls." }
+
+          - label: "Contact & Footer"
+            name: "params"
+            widget: "object"
+            fields:
+              - { label: "Contact Form Endpoint", name: "contact_form_action", widget: "string", hint: "FormSubmit or similar endpoint the contact form posts to." }
+              - { label: "Appointment Form Endpoint", name: "appointment_form_action", widget: "string" }
+              - { label: "Contact Email", name: "contact_email", widget: "string" }
+              - { label: "Contact Phone (display)", name: "contact_phone", widget: "string", hint: "Formatted for humans, e.g. 1-208-304-3525." }
+              - { label: "Contact Phone (tel: link)", name: "contact_phone_tel", widget: "string", hint: "Digits with country code, e.g. +12083043525." }
+              - { label: "License Text", name: "license_text", widget: "string" }
+              - { label: "Address", name: "address", widget: "string" }
+              - { label: "Footer Description", name: "footer_description", widget: "text", hint: "HTML allowed. Use <br> for line breaks." }
+              - { label: "Copyright Line", name: "copyright", widget: "string" }
+
+          - label: "Top Announcement Bar"
+            name: "notification"
+            widget: "object"
+            fields:
+              - { label: "Show Announcement Bar", name: "enable", widget: "boolean", default: true }
+              - { label: "Message", name: "message", widget: "string", required: false }
+              - { label: "Link URL", name: "link", widget: "string", required: false }
+              - { label: "Link Label", name: "label", widget: "string", required: false }
+              - { label: "Icon", name: "icon", widget: "string", required: false, hint: "React Icons name, e.g. FaPhone. See react-icons.github.io/react-icons/icons/fa/" }
+
+          - label: "Header CTA Button"
+            name: "navigation_button"
+            widget: "object"
+            fields:
+              - { label: "Show Button", name: "enable", widget: "boolean", default: true }
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Link", name: "link", widget: "string" }
+
+          - label: "Google Tag Manager"
+            name: "google_tag_manager"
+            widget: "object"
+            fields:
+              - { label: "Enable", name: "enable", widget: "boolean", default: false }
+              - { label: "GTM ID", name: "gtm_id", widget: "string", required: false, hint: "Format: GTM-XXXXXX" }
+
+          - label: "SEO Metadata"
+            name: "metadata"
+            widget: "object"
+            fields:
+              - { label: "Author", name: "meta_author", widget: "string" }
+              - { label: "Social Share Image", name: "meta_image", widget: "image", hint: "Shown when the site is linked on Facebook, LinkedIn, etc. 1200×630 recommended." }
+              - { label: "Default Meta Description", name: "meta_description", widget: "text", hint: "Under 160 characters. Shown in Google search results." }
+
+      - name: "navigation_menu"
+        label: "Navigation Menu"
+        file: "src/config/menu.json"
+        format: "json"
+        fields:
+          - label: "Main Navigation"
+            name: "main"
+            widget: "list"
+            summary: "{{fields.name}} → {{fields.url}}"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "URL", name: "url", widget: "string", hint: "Internal path like /about or full https:// URL." }
+
+          - label: "Footer Navigation"
+            name: "footer"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Column Title", name: "title", widget: "string" }
+              - label: "Links"
+                name: "children"
+                widget: "list"
+                summary: "{{fields.name}} → {{fields.url}}"
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+
+      - name: "social_links"
+        label: "Social Links"
+        file: "src/config/social.json"
+        format: "json"
+        fields:
+          - label: "Social Profiles"
+            name: "main"
+            widget: "list"
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Platform Name", name: "name", widget: "string" }
+              - { label: "Icon", name: "icon", widget: "string", hint: "React Icons name, e.g. FaFacebook, FaInstagram, FaLinkedin." }
+              - { label: "Profile URL", name: "link", widget: "string" }
+
+  # ────────────────────────────────────────────────────────────────
+  # HOMEPAGE (singleton)
+  # ────────────────────────────────────────────────────────────────
+  - name: "homepage"
+    label: "Homepage"
+    description: "Sections shown on the homepage: hero, about, full scope, customer stats, testimonials, and blog teaser."
+    files:
+      - name: "homepage"
+        label: "Homepage Content"
+        file: "src/content/homepage/-index.md"
+        fields:
+          - label: "Hero Section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Headline", name: "title", widget: "string", hint: "Main H1. Use **word** to bold, <br> for a line break." }
+              - { label: "Eyebrow Subtitle", name: "subtitle", widget: "string", hint: "Small uppercase line above the headline." }
+              - label: "Buttons"
+                name: "buttons"
+                widget: "list"
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: "Show Button", name: "enable", widget: "boolean", default: true }
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Link", name: "link", widget: "string", hint: "URL or tel:+1... for phone." }
+                  - { label: "Icon", name: "icon", widget: "string", required: false }
+                  - { label: "Type", name: "type", widget: "string", required: false, hint: "Optional button variant (e.g. primary/secondary)." }
+              - { label: "Hero Background Image", name: "image", widget: "image", hint: "Wide, high-resolution photo. 1920×1080 or larger recommended." }
+              - label: "Trust Badges / Review Chips"
+                name: "reviews"
+                widget: "list"
+                summary: "{{fields.name}}"
+                fields:
+                  - { label: "Text", name: "name", widget: "string" }
+                  - { label: "Icon", name: "icon", widget: "string", required: false }
+                  - { label: "Company Logo", name: "company_logo", widget: "image", required: false }
+                  - { label: "Rating", name: "rating", widget: "number", required: false, value_type: "float" }
+
+          - label: "About Section"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Show Section", name: "enable", widget: "boolean", default: true }
+              - { label: "Headline", name: "title", widget: "string", hint: "Use **word** to bold." }
+              - { label: "Eyebrow Subtitle", name: "subtitle", widget: "string" }
+              - { label: "Body Text", name: "content", widget: "text" }
+              - label: "Hours / Schedule"
+                name: "schedule"
+                widget: "list"
+                summary: "{{fields.day}} — {{fields.time}}"
+                fields:
+                  - { label: "Day / Range", name: "day", widget: "string" }
+                  - { label: "Hours", name: "time", widget: "string" }
+              - label: "Button"
+                name: "button"
+                widget: "object"
+                fields:
+                  - { label: "Show Button", name: "enable", widget: "boolean", default: true }
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Link", name: "link", widget: "string" }
+                  - { label: "Icon", name: "icon", widget: "string", required: false }
+                  - { label: "Type", name: "type", widget: "string", required: false }
+              - { label: "Badge Image", name: "badge", widget: "image", hint: "Small badge/logo overlay shown on the photo." }
+              - label: "Photos"
+                name: "images"
+                widget: "list"
+                field: { label: "Photo", name: "image", widget: "image" }
+
+          - label: "What We Do (Responsibility) Section"
+            name: "responsibility"
+            widget: "object"
+            fields:
+              - { label: "Show Section", name: "enable", widget: "boolean", default: true }
+              - { label: "Headline", name: "title", widget: "string" }
+              - { label: "Eyebrow Subtitle", name: "subtitle", widget: "string" }
+              - { label: "Body Text", name: "content", widget: "text" }
+              - { label: "Main Image", name: "image", widget: "image" }
+              - label: "Video"
+                name: "video"
+                widget: "object"
+                fields:
+                  - { label: "Thumbnail Image", name: "thumbnail", widget: "image" }
+                  - { label: "Video Embed URL", name: "url", widget: "string", hint: "e.g. https://www.youtube.com/embed/XXXX" }
+              - label: "Job Highlights"
+                name: "job"
+                widget: "list"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "content", widget: "text" }
+
+          - label: "Customer / Stats Section"
+            name: "customer"
+            widget: "object"
+            fields:
+              - { label: "Show Section", name: "enable", widget: "boolean", default: false }
+              - label: "Headline"
+                name: "title"
+                widget: "object"
+                fields:
+                  - { label: "Big Number / Stat", name: "value", widget: "string", hint: "e.g. 250+" }
+                  - { label: "Caption", name: "text", widget: "string" }
+              - label: "Logos"
+                name: "logo"
+                widget: "list"
+                required: false
+                field: { label: "Logo", name: "logo", widget: "image" }
+
+          - label: "Testimonials Section"
+            name: "testimonial"
+            widget: "object"
+            fields:
+              - { label: "Show Section", name: "enable", widget: "boolean", default: false }
+              - label: "Reviews"
+                name: "review"
+                widget: "list"
+                required: false
+                summary: "{{fields.name}}"
+                fields:
+                  - { label: "Customer Name", name: "name", widget: "string" }
+                  - { label: "About / Title", name: "about", widget: "string" }
+                  - { label: "Photo", name: "image", widget: "image" }
+                  - { label: "Quote", name: "says", widget: "text" }
+
+          - label: "Blog Teaser Section"
+            name: "blog"
+            widget: "object"
+            fields:
+              - { label: "Show Section", name: "enable", widget: "boolean", default: true }
+              - { label: "Headline", name: "title", widget: "string" }
+              - { label: "Eyebrow Subtitle", name: "subtitle", widget: "string" }
+
+  # ────────────────────────────────────────────────────────────────
+  # OTHER SINGLETON PAGES
+  # ────────────────────────────────────────────────────────────────
+  - name: "pages_singletons"
+    label: "Pages"
+    description: "One-off pages: About, Contact, Appointment, Gallery, and their archive indexes."
+    files:
+      - name: "about_page"
+        label: "About Page"
+        file: "src/content/about/-index.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Meta Title", name: "meta_title", widget: "string", required: false, hint: "Overrides the browser tab title for this page." }
+          - { label: "Meta Description", name: "description", widget: "text" }
+          - { label: "Eyebrow Subtitle", name: "subtitle", widget: "string", required: false }
+          - { label: "Hero Image", name: "image", widget: "image", required: false }
+          - { label: "Published Date", name: "date", widget: "datetime", required: false }
+          - { label: "Hide From Site (Draft)", name: "draft", widget: "boolean", default: false }
+          - label: "Why Us — Alternating Blocks"
+            name: "why_us"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string", required: false }
+              - { label: "Eyebrow Subtitle", name: "subtitle", widget: "string", required: false }
+              - { label: "Body Text", name: "content", widget: "text", required: false }
+              - { label: "Main Image", name: "image", widget: "image", required: false }
+              - { label: "Overlay Image", name: "overlay_image", widget: "image", required: false, hint: "Small image positioned on top of the main image." }
+              - label: "Bullet Points"
+                name: "bullet_points"
+                widget: "list"
+                required: false
+                field: { label: "Bullet", name: "bullet", widget: "string" }
+              - label: "Button"
+                name: "button"
+                widget: "object"
+                required: false
+                fields:
+                  - { label: "Show Button", name: "enable", widget: "boolean", default: true }
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Link", name: "link", widget: "string" }
+                  - { label: "Icon", name: "icon", widget: "string", required: false }
+                  - { label: "Type", name: "type", widget: "string", required: false }
+          - label: "Pride Block"
+            name: "pride"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string", required: false }
+              - { label: "Eyebrow Subtitle", name: "subtitle", widget: "string", required: false }
+              - { label: "Body Text", name: "content", widget: "text" }
+              - label: "Photos"
+                name: "images"
+                widget: "list"
+                field: { label: "Photo", name: "image", widget: "image" }
+          - label: "Team Section"
+            name: "team"
+            widget: "object"
+            fields:
+              - { label: "Show Section", name: "enable", widget: "boolean", default: true }
+              - { label: "Title", name: "title", widget: "string", required: false }
+              - { label: "Eyebrow Subtitle", name: "subtitle", widget: "string", required: false }
+              - label: "Members"
+                name: "members"
+                widget: "list"
+                summary: "{{fields.name}} — {{fields.designation}}"
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Job Title", name: "designation", widget: "string" }
+                  - { label: "Photo", name: "image", widget: "image" }
+          - { label: "Body (Markdown)", name: "body", widget: "markdown", required: false }
+
+      - name: "contact_page"
+        label: "Contact Page"
+        file: "src/content/contact/-index.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Meta Title", name: "meta_title", widget: "string", required: false }
+          - { label: "Meta Description", name: "description", widget: "text" }
+          - { label: "Eyebrow Subtitle", name: "subtitle", widget: "string", required: false }
+          - { label: "Hero Image", name: "image", widget: "image", required: false }
+          - { label: "Published Date", name: "date", widget: "datetime", required: false }
+          - { label: "Hide From Site (Draft)", name: "draft", widget: "boolean", default: false }
+          - { label: "Body (Markdown)", name: "body", widget: "markdown", required: false }
+
+      - name: "appointment_page"
+        label: "Appointment Page"
+        file: "src/content/appointment/-index.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Meta Title", name: "meta_title", widget: "string", required: false }
+          - { label: "Meta Description", name: "description", widget: "text" }
+          - { label: "Eyebrow Subtitle", name: "subtitle", widget: "string", required: false }
+          - { label: "Hero Image", name: "image", widget: "image", required: false }
+          - { label: "Published Date", name: "date", widget: "datetime", required: false }
+          - { label: "Hide From Site (Draft)", name: "draft", widget: "boolean", default: false }
+          - label: "Contact Methods"
+            name: "contact_way"
+            widget: "list"
+            summary: "{{fields.value}}"
+            fields:
+              - { label: "Icon", name: "icon", widget: "string", hint: "React Icons name, e.g. FaPhone, FaEnvelope." }
+              - { label: "Value", name: "value", widget: "string", hint: "Phone number, email, or address to display." }
+          - { label: "Body (Markdown)", name: "body", widget: "markdown", required: false }
+
+      - name: "gallery_page"
+        label: "Gallery Page"
+        file: "src/content/gallery/-index.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Meta Title", name: "meta_title", widget: "string", required: false }
+          - { label: "Meta Description", name: "description", widget: "text" }
+          - { label: "Eyebrow Subtitle", name: "subtitle", widget: "string", required: false }
+          - { label: "Hero Image", name: "image", widget: "image", required: false }
+          - { label: "Published Date", name: "date", widget: "datetime", required: false }
+          - { label: "Hide From Site (Draft)", name: "draft", widget: "boolean", default: false }
+          - label: "Gallery Photos"
+            name: "images"
+            widget: "list"
+            summary: "{{fields.description}}"
+            fields:
+              - { label: "Photo", name: "image", widget: "image" }
+              - { label: "Caption", name: "description", widget: "string", required: false }
+          - { label: "Body (Markdown)", name: "body", widget: "markdown", required: false }
+
+      - name: "cta_section"
+        label: "Call-to-Action Section (reused across pages)"
+        file: "src/content/sections/call-to-action.md"
+        fields:
+          - { label: "Show CTA Block", name: "enable", widget: "boolean", default: true }
+          - { label: "Headline", name: "title", widget: "string", required: false }
+          - { label: "Eyebrow Subtitle", name: "subtitle", widget: "string", required: false }
+          - { label: "Body Text", name: "content", widget: "text", required: false }
+          - { label: "Background / Side Image", name: "image", widget: "image", required: false }
+          - label: "Buttons"
+            name: "buttons"
+            widget: "list"
+            required: false
+            summary: "{{fields.label}}"
+            fields:
+              - { label: "Show Button", name: "enable", widget: "boolean", default: true }
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Link", name: "link", widget: "string" }
+              - { label: "Icon", name: "icon", widget: "string", required: false }
+              - { label: "Type", name: "type", widget: "string", required: false }
+
+      - name: "services_index"
+        label: "Services — Archive Page"
+        file: "src/content/services/-index.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Meta Title", name: "meta_title", widget: "string", required: false }
+          - { label: "Meta Description", name: "description", widget: "text" }
+          - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
+          - { label: "Hero Image", name: "image", widget: "image", required: false }
+          - { label: "Published Date", name: "date", widget: "datetime", required: false }
+          - { label: "Hide From Site (Draft)", name: "draft", widget: "boolean", default: false }
+          - { label: "Body (Markdown)", name: "body", widget: "markdown", required: false }
+
+      - name: "blog_index"
+        label: "Blog — Archive Page"
+        file: "src/content/blog/-index.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Meta Title", name: "meta_title", widget: "string", required: false }
+          - { label: "Meta Description", name: "description", widget: "text" }
+          - { label: "Hero Image", name: "image", widget: "image", required: false }
+          - { label: "Published Date", name: "date", widget: "datetime", required: false }
+          - { label: "Hide From Site (Draft)", name: "draft", widget: "boolean", default: false }
+          - { label: "Body (Markdown)", name: "body", widget: "markdown", required: false }
+
+  # ────────────────────────────────────────────────────────────────
+  # SERVICES (folder of individual service pages)
+  # ────────────────────────────────────────────────────────────────
+  - name: "services"
+    label: "Services"
+    label_singular: "Service"
+    folder: "src/content/services"
+    filter: { field: "title", value_type: "string" }
+    create: true
+    slug: "{{slug}}"
+    identifier_field: "title"
+    summary: "{{title}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string", hint: "Use <br> for a line break and **word** to bold. Appears as the service page H1 and in navigation." }
+      - { label: "Homepage Card Title", name: "home_title", widget: "string", required: false, hint: "Shorter version shown on the homepage services grid." }
+      - { label: "Meta Title", name: "meta_title", widget: "string", required: false }
+      - { label: "Meta Description", name: "description", widget: "text", hint: "Under 160 characters. Also used as the short teaser on archive pages." }
+      - label: "Detailed Descriptions (paragraphs)"
+        name: "descriptions"
+        widget: "list"
+        required: false
+        field: { label: "Paragraph", name: "paragraph", widget: "text" }
+      - { label: "Icon", name: "icon", widget: "string", required: false, hint: "React Icons name, e.g. FaBuilding, FaHammer." }
+      - { label: "Banner Image", name: "banner", widget: "image", required: false, hint: "Large hero photo for the service page. 1600×900 or larger." }
+      - { label: "Card Image (optional)", name: "image", widget: "image", required: false }
+      - { label: "Eyebrow Subtitle", name: "subtitle", widget: "string", required: false }
+      - label: "Categories"
+        name: "categories"
+        widget: "list"
+        required: false
+        field: { label: "Category", name: "category", widget: "string" }
+      - { label: "Sort Weight", name: "weight", widget: "number", required: false, value_type: "int", hint: "Lower = earlier. Services are ordered by this number." }
+      - { label: "Show On Homepage", name: "homepage_section_enable", widget: "boolean", required: false, default: false }
+      - { label: "Published Date", name: "date", widget: "datetime", required: false }
+      - { label: "Hide From Site (Draft)", name: "draft", widget: "boolean", default: false }
+      - label: "Process Steps (optional)"
+        name: "process"
+        widget: "object"
+        required: false
+        fields:
+          - { label: "Section Title", name: "title", widget: "string", required: false }
+          - { label: "Intro Text", name: "content", widget: "text" }
+          - label: "Steps"
+            name: "processes"
+            widget: "list"
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Step Name", name: "name", widget: "string" }
+              - { label: "Icon", name: "icon", widget: "string", required: false }
+              - { label: "Description", name: "content", widget: "text" }
+      - { label: "Body (Markdown)", name: "body", widget: "markdown", required: false, hint: "Optional long-form content below the structured fields." }
+
+  # ────────────────────────────────────────────────────────────────
+  # BLOG POSTS
+  # ────────────────────────────────────────────────────────────────
+  - name: "blog"
+    label: "Blog Posts"
+    label_singular: "Blog Post"
+    folder: "src/content/blog"
+    filter: { field: "title", value_type: "string" }
+    create: true
+    slug: "{{slug}}"
+    identifier_field: "title"
+    summary: "{{title}} — {{date | date('YYYY-MM-DD')}}"
+    sortable_fields: ["date", "title"]
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Meta Title", name: "meta_title", widget: "string", required: false, hint: "Overrides the title in Google results. Defaults to Title if blank." }
+      - { label: "Meta Description", name: "description", widget: "text", hint: "Under 160 characters." }
+      - { label: "Published Date", name: "date", widget: "datetime" }
+      - { label: "Cover Image", name: "image", widget: "image", required: false, hint: "Shown at the top of the post and on blog cards. 1600×900 recommended." }
+      - { label: "Badge (optional)", name: "badge", widget: "string", required: false, hint: "Small tag shown on the card, e.g. NEW or FEATURED." }
+      - label: "Categories"
+        name: "categories"
+        widget: "list"
+        required: false
+        field: { label: "Category", name: "category", widget: "string" }
+      - { label: "Hide From Site (Draft)", name: "draft", widget: "boolean", default: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # ────────────────────────────────────────────────────────────────
+  # GENERIC PAGES (src/content/pages/*)
+  # ────────────────────────────────────────────────────────────────
+  - name: "pages"
+    label: "Generic Pages"
+    label_singular: "Page"
+    folder: "src/content/pages"
+    extension: "md"
+    format: "yaml-frontmatter"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: "title"
+    summary: "{{title}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Meta Title", name: "meta_title", widget: "string", required: false }
+      - { label: "Meta Description", name: "description", widget: "text" }
+      - { label: "Hero Image", name: "image", widget: "image", required: false }
+      - { label: "Published Date", name: "date", widget: "datetime", required: false }
+      - { label: "Hide From Site (Draft)", name: "draft", widget: "boolean", default: false }
+      - { label: "Body", name: "body", widget: "markdown" }
