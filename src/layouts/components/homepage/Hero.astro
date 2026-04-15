@@ -11,7 +11,7 @@ const { hero }: Props = Astro.props;
 ---
 
 <section
-  class="section relative mb-22"
+  class="section relative mb-22 max-sm:mb-5"
   style={`background-image: url('${hero.image}'); background-size: cover; background-position: center;`}>
   <div
     class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/20 z-0">
@@ -26,7 +26,7 @@ const { hero }: Props = Astro.props;
     <CustomHeading
       as="h1"
       text={hero.title}
-      class="!font-secondary h3 lg:text-[72px] xl:text-[80px] xl:tracking-[-1px] xl:leading-[88px] mb-6 text-center lg:text-left text-balance text-text-light pb-[175px]"
+      class="!font-secondary h3 lg:text-[72px] xl:text-[80px] xl:tracking-[-1px] xl:leading-[88px] mb-6 text-center lg:text-left text-balance text-text-light pb-[175px] max-sm:pb-[100px]"
       dataAos="fade-up-sm"
       dataAosDelay="40"
     />

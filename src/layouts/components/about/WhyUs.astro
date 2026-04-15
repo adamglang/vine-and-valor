@@ -68,13 +68,13 @@ const { why_us } = Astro.props;
               />
             )}
             {v.bullet_points && (
-              <ul class="mt-10 lg:mt-16">
+              <ul class="mt-10 lg:mt-16 w-fit mx-auto md:mx-0">
                 {v.bullet_points.map((p: string, i: number) => (
                   <li
-                    class="mb-3.5 flex! items-center! justify-center md:justify-start"
+                    class="mb-3.5 flex! items-start! justify-start"
                     data-aos="fade-up-sm"
                     data-aos-delay={50 + i * 50}>
-                    <div class="bg-primary h-fit p-1 rounded-full mr-2">
+                    <div class="bg-primary h-fit p-1 rounded-full mr-2 mt-1 shrink-0">
                       <DynamicIcon
                         icon="FaCheck"
                         className="text-white text-xs"

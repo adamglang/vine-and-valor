@@ -17,8 +17,8 @@
   },
 
   "params": {
-    "contact_form_action": "#",
-    "appointment_form_action": "#",
+    "contact_form_action": "https://formsubmit.co/info@vineandvalorsolutions.com",
+    "appointment_form_action": "https://formsubmit.co/info@vineandvalorsolutions.com",
     "contact_email": "info@vineandvalorsolutions.com",
     "contact_phone": "1-208-304-3525",
     "contact_phone_tel": "+12083043525",
