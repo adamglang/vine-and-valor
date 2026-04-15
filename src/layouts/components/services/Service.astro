@@ -11,9 +11,15 @@ type Props = {
 };
 
 const { serviceIndex, allServices, hero } = Astro.props;
+
+const sortedServices = [...allServices].sort((a, b) => {
+  const wa = a.data.weight ?? 999;
+  const wb = b.data.weight ?? 999;
+  return wa - wb;
+});
 ---
 
-<section class={`section ${hero && "mt-24 sm:mt-20"} ${!hero && "pt-0"}`}>
+<section class={`section ${hero ? "mt-24 sm:mt-20" : ""}`}>
   <div class="container">
     <div
       class="row max-md:gy-5 md:g-1 lg:g-4 justify-center md:justify-between items-center">
@@ -61,52 +67,42 @@ const { serviceIndex, allServices, hero } = Astro.props;
 
       <div class="col-12">
         <div
-          class="flex flex-wrap justify-center md:justify-between items-center mt-10 lg:mt-16 max-lg:gap-10 gap-y-5">
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-12 mt-12 lg:mt-16">
           {
-            allServices.map((service, i) => (
-              <>
-                <div
-                  class="group"
-                  data-aos="fade-right-sm"
-                  data-aos-delay={100 + i * 50}>
-                  <div class="group-child">
-                    <DynamicIcon
-                      icon={service.data.icon!}
-                      className="mb-6 text-5xl p-2 rounded bg-secondary/70"
-                    />
-
-                    <p
-                      set:html={markdownify(service.data.title!)}
-                      class="text-xl font-medium mb-3 leading-[33px] [&>br]:block w-fit"
-                    />
-
-                    <div class="relative overflow-hidden w-fit">
-                      <a
-                        href={`/services/${service.id}`}
-                        class="font-medium text-nowrap inline-block group text-base-sm">
-                        <span class="-translate-x-[86%] transform transition-transform duration-300 inline-flex items-center group-hover:translate-x-0">
-                          Discover More
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            class="w-4 h-4 ml-1">
-                            <line x1="5" y1="12" x2="19" y2="12" />
-                            <polyline points="12 5 19 12 12 19" />
-                          </svg>
-                        </span>
-                      </a>
-                    </div>
-                  </div>
+            sortedServices.map((service, i) => (
+              <a
+                href={`/services/${service.id}`}
+                class="group flex flex-col items-start text-left"
+                data-aos="fade-up-sm"
+                data-aos-delay={100 + i * 40}>
+                <div class="h-14 w-14 flex items-center justify-center rounded-md bg-secondary/80 mb-5 transition-transform duration-300 group-hover:scale-105">
+                  <DynamicIcon
+                    icon={service.data.icon!}
+                    className="text-2xl text-text"
+                  />
                 </div>
-                {i !== allServices.length - 1 && (
-                  <hr class="w-30 hidden lg:block border-border rotate-90" />
-                )}
-              </>
+
+                <p
+                  set:html={markdownify(service.data.title!)}
+                  class="text-lg font-medium mb-3 leading-snug [&>br]:block text-text group-hover:text-primary transition-colors duration-300"
+                />
+
+                <span class="text-base-sm font-medium text-text/80 inline-flex items-center gap-1 group-hover:text-primary transition-colors duration-300">
+                  Discover More
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1">
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <polyline points="12 5 19 12 12 19" />
+                  </svg>
+                </span>
+              </a>
             ))
           }
         </div>

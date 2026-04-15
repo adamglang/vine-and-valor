@@ -6,19 +6,9 @@
       "link": "https://www.facebook.com/"
     },
     {
-      "name": "GitHub",
-      "icon": "FaGithub",
-      "link": "https://www.github.com/"
-    },
-    {
-      "name": "LinkedIn",
-      "icon": "FaLinkedin",
-      "link": "https://www.linkedin.com/"
-    },
-    {
-      "name": "X",
-      "icon": "FaXTwitter",
-      "link": "https://x.com/"
+      "name": "Instagram",
+      "icon": "FaInstagram",
+      "link": "https://www.instagram.com/"
     }
   ]
 }

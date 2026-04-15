@@ -3,6 +3,7 @@ dist/
 .output/
 .json/
 tsconfig.tsbuildinfo
+.playwright-mcp/
 
 # dependencies
 node_modules/
@@ -27,3 +28,6 @@ package-lock.json
 
 # Local Netlify folder
 .netlify
+
+# docs
+docs/

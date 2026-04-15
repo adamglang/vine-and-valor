@@ -1,15 +1,15 @@
 {
   "site": {
-    "title": "Cleaner - Astro Theme for Services Business",
-    "base_url": "https://cleaner-astro.vercel.app/",
+    "title": "Vine & Valor Solutions | Concrete Contractor in North Idaho",
+    "base_url": "https://vineandvalorsolutions.com/",
     "base_path": "/",
     "trailing_slash": false,
-    "favicon": "/images/favicon.png",
-    "logo": "/images/logo-dark.svg",
-    "footer_logo": "/images/logo.svg",
-    "logo_width": "142",
-    "logo_height": "36",
-    "logo_text": "cleaner"
+    "favicon": "/images/logos/vine-and-valor-logo-blue-white-transparent-cropped.png",
+    "logo": "/images/logos/vine-and-valor-horizontal-logo-dark-v2.png",
+    "footer_logo": "/images/logos/vine-and-valor-horizontal-logo-all-white.png",
+    "logo_width": "220",
+    "logo_height": "60",
+    "logo_text": "Vine & Valor Solutions"
   },
 
   "settings": {
@@ -19,21 +19,26 @@
   "params": {
     "contact_form_action": "#",
     "appointment_form_action": "#",
-    "footer_description": "Professional cleaning services <br> using innovative technology.",
-    "copyright": "[Themefisher](https://themefisher.com/) © 2025 All Rights Reserved"
+    "contact_email": "info@vineandvalorsolutions.com",
+    "contact_phone": "1-208-304-3525",
+    "contact_phone_tel": "+12083043525",
+    "license_text": "Idaho Licensed Concrete Contractor",
+    "address": "Priest River, Idaho",
+    "footer_description": "Craftsman concrete contractor serving North Idaho <br> foundations, flatwork, decorative concrete, and more.",
+    "copyright": "Vine & Valor Solutions © 2026 All Rights Reserved"
   },
 
   "notification": {
     "enable": true,
-    "message": "Need quick cleaning help?",
-    "link": "tel:+1-394-495-5993",
-    "label": "Call Us: +1 071 281 9795",
+    "message": "Free estimates across North Idaho.",
+    "link": "tel:+12083043525",
+    "label": "Call Us: 1-208-304-3525",
     "icon": "FaPhone"
   },
 
   "navigation_button": {
     "enable": true,
-    "label": "Make An Appointment ",
+    "label": "Request an Estimate",
     "link": "/appointment"
   },
 
@@ -43,8 +48,8 @@
   },
 
   "metadata": {
-    "meta_author": "Themefisher",
-    "meta_image": "/images/og-image.png",
-    "meta_description": "Cleaner - Astro Theme for Services Business"
+    "meta_author": "Vine & Valor Solutions",
+    "meta_image": "/images/logos/vine-and-valor-true-blue-black-logo.png",
+    "meta_description": "Vine & Valor Solutions is a licensed concrete contractor in Priest River, Idaho. Foundations, flatwork, stamped patios, retaining walls, and decorative concrete across North Idaho."
   }
 }

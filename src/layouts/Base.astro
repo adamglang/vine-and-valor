@@ -1,5 +1,4 @@
 ---
-import TwSizeIndicator from "@/components/TwSizeIndicator.astro";
 import config from "@/config/config.json";
 import theme from "@/config/theme.json";
 import { plainify } from "@/lib/utils/textConverter";
@@ -45,7 +44,7 @@ const { title, meta_title, description, image, noindex, canonical } =
     <!-- favicon -->
     <link rel="shortcut icon" href={config.site.favicon} />
     <!-- theme meta -->
-    <meta name="theme-name" content="cleaner-astro" />
+    <meta name="theme-name" content="vine-and-valor" />
     <meta name="msapplication-TileColor" content="#000000" />
     <meta
       name="theme-color"
@@ -116,7 +115,7 @@ const { title, meta_title, description, image, noindex, canonical } =
     <meta property="og:type" content="website" />
     <meta
       property="og:url"
-      content={`${config.site.base_url}/${Astro.url.pathname.replace("/", "")}`}
+      content={`${config.site.base_url.replace(/\/$/, "")}${Astro.url.pathname}`}
     />
 
     <!-- twitter-title -->
@@ -138,15 +137,72 @@ const { title, meta_title, description, image, noindex, canonical } =
     <!-- og-image -->
     <meta
       property="og:image"
-      content={`${config.site.base_url}${image ? image : config.metadata.meta_image}`}
+      content={`${config.site.base_url.replace(/\/$/, "")}${image ? image : config.metadata.meta_image}`}
     />
 
     <!-- twitter-image -->
     <meta
       name="twitter:image"
-      content={`${config.site.base_url}${image ? image : config.metadata.meta_image}`}
+      content={`${config.site.base_url.replace(/\/$/, "")}${image ? image : config.metadata.meta_image}`}
     />
     <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- LocalBusiness / GeneralContractor structured data -->
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "GeneralContractor",
+        name: "Vine & Valor Solutions",
+        image: `${config.site.base_url.replace(/\/$/, "")}${config.metadata.meta_image}`,
+        logo: `${config.site.base_url.replace(/\/$/, "")}${config.site.logo}`,
+        url: config.site.base_url,
+        telephone: "+1-208-304-3525",
+        email: "info@vineandvalorsolutions.com",
+        priceRange: "$$",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Priest River",
+          addressRegion: "ID",
+          addressCountry: "US",
+        },
+        areaServed: [
+          "Priest River, Idaho",
+          "Sandpoint, Idaho",
+          "Priest Lake, Idaho",
+          "Coeur d'Alene, Idaho",
+          "Post Falls, Idaho",
+          "Blanchard, Idaho",
+          "Spirit Lake, Idaho",
+          "Hayden, Idaho",
+          "Bonners Ferry, Idaho",
+        ],
+        serviceArea: {
+          "@type": "AdministrativeArea",
+          name: "North Idaho (Idaho Panhandle)",
+        },
+        hasCredential: "Idaho Licensed Concrete Contractor",
+        openingHoursSpecification: [
+          {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            opens: "07:00",
+            closes: "18:00",
+          },
+        ],
+        sameAs: [],
+        makesOffer: [
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Concrete Foundations & Footings" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Concrete Flatwork, Driveways & Patios" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Stamped & Decorative Concrete" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Retaining Walls & Structural Concrete" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Excavation & Site Preparation" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Concrete Repair & Restoration" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Heated Driveways & Snow Melt" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Commercial Site Concrete" } },
+        ],
+      })}
+    />
   </head>
   <body>
     {/* google tag manager noscript */}
@@ -156,7 +212,6 @@ const { title, meta_title, description, image, noindex, canonical } =
       )
     }
 
-    <TwSizeIndicator />
     <Header />
     <main id="main-content">
       <slot />

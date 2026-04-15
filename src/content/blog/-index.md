@@ -1,9 +1,9 @@
 ---
-title: "Read Our **Articles**"
-meta_title: ""
-description: "Themefisher gives you the blocks needed to create a truly professional website for your SaaS is a long established fact that a reader."
+title: "Notes from the **Field**"
+meta_title: "Concrete Journal & Field Notes | Vine & Valor Solutions"
+description: "Field notes on concrete work in North Idaho mix designs for freeze-thaw, stamped patios, foundations, and what separates a ten-year slab from a fifty-year one."
 image: ""
 draft: false
 
-badge: "BLOG"
+badge: "JOURNAL"
 ---

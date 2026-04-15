@@ -118,8 +118,9 @@ const homepageCollection = defineCollection({
       reviews: z.array(
         z.object({
           name: z.string(),
-          company_logo: z.string(),
-          rating: z.number(),
+          icon: z.string().optional(),
+          company_logo: z.string().optional(),
+          rating: z.number().optional(),
         })
       ),
     }),

@@ -1,31 +1,31 @@
 ---
-title: "We provide our best <br> cleaning **services**"
-meta_title: ""
-description: "this is service page"
-image: ""
+title: "Concrete Services <br> across **North Idaho**"
+meta_title: "Concrete Services in North Idaho | Vine & Valor Solutions"
+description: "Full-scope concrete contractor in Priest River, Idaho foundations, flatwork, stamped patios, retaining walls, excavation, and decorative concrete across the Panhandle."
+image: "/images/concrete/poured-concrete-shop-slab-foundation.webp"
 draft: false
 
 homepage_section_enable: true
-home_title: "We provide our best <br> **cleaning** services for you"
-subtitle: "HIGHEST LEVEL OF SERVICE"
+home_title: "Full-scope **concrete work** for home and job site"
+subtitle: "A LICENSED IDAHO CONCRETE CONTRACTOR"
 descriptions:
-  - "Our company provides a wide range of cleaning services, from home cleaning to office cleaning. We use only advanced technologies to keep your room looking the best."
-  - "Our team of experts who have been in the profession for years focuses on helping you achieve optimal clean surface."
+  - "Vine & Valor Solutions pours foundations, driveways, stamped patios, retaining walls, and decorative flatwork across Priest River, Sandpoint, Priest Lake, Coeur d'Alene, Post Falls, and every town in between."
+  - "We own the project from grade to final seal. One crew, one standard, mix designs engineered for North Idaho winters."
 
 process:
-  title: "The process we have been doing <br> for **over 25 years** of service"
-  content: "Our clinic provides a wide range of oral care services, from checkups to fitting braces. We use only advanced technologies to keep your smile looking the best. Our clinic provides a wide range of oral care services,"
+  title: "How we build <br> **every pour**, every time"
+  content: "Concrete is unforgiving: once it sets, it's set. Our process is built to catch problems before they go in the ground, so the finished work holds its line for decades."
   processes:
-    - name: "Hygiene & Clean"
-      icon: "FaBottleDroplet"
-      content: "Our clinic provides a wide range of oral care services, from checkups to fitting braces. we are ready."
-    - name: "Safety Check"
-      icon: "FaRegHeart"
-      content: "Our clinic provides a wide range of oral care services, from checkups to fitting braces. we are ready."
-    - name: "Deep Cleaning"
-      icon: "FaBroom"
-      content: "Our clinic provides a wide range of oral care services, from checkups to fitting braces. we are ready."
-    - name: "Health Inspection"
-      icon: "FaHeartCirclePlus"
-      content: "Our clinic provides a wide range of oral care services, from checkups to fitting braces. we are ready."
+    - name: "Site Walk & Estimate"
+      icon: "FaRegCompass"
+      content: "We walk the property, measure, read the soils, and write a clear estimate with the mix, reinforcement, and schedule spelled out."
+    - name: "Excavation & Forming"
+      icon: "FaRuler"
+      content: "Grading, soil compaction, base prep, and precision forming. Layout is squared, elevations are set, and rebar or post-tension is tied to spec."
+    - name: "Pour & Finish"
+      icon: "FaTrowel"
+      content: "Ready-mix placed, vibrated, screeded, and finished broom, trowel, stamped, stained, or polished with control joints cut before the slab can talk back."
+    - name: "Cure, Seal & Walk"
+      icon: "FaShieldHalved"
+      content: "Proper cure time, sealer applied, site walked with the client. We stand behind every pour with workmanship we'd put at our own homes."
 ---

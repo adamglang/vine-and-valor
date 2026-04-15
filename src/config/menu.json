@@ -1,7 +1,7 @@
 {
   "main": [
     {
-      "name": "About Us",
+      "name": "About",
       "url": "/about"
     },
     {
@@ -19,14 +19,6 @@
     {
       "name": "Contact",
       "url": "/contact"
-    },
-    {
-      "name": "Elements",
-      "url": "/elements"
-    },
-    {
-      "name": "404",
-      "url": "/404"
     }
   ],
   "footer": [
@@ -46,11 +38,11 @@
           "url": "/about"
         },
         {
-          "name": "Elements",
-          "url": "/elements"
+          "name": "Gallery",
+          "url": "/gallery"
         },
         {
-          "name": "Contacts",
+          "name": "Contact",
           "url": "/contact"
         }
       ]
@@ -59,20 +51,24 @@
       "title": "Services",
       "children": [
         {
-          "name": "Home Cleaning",
-          "url": "/services/home-cleaning"
+          "name": "Foundations & Footings",
+          "url": "/services/foundations-and-footings"
         },
         {
-          "name": "Window Cleaning",
-          "url": "/services/window-cleaning"
+          "name": "Flatwork & Driveways",
+          "url": "/services/flatwork-driveways-patios"
         },
         {
-          "name": "Pest Control",
-          "url": "/services/pest-control"
+          "name": "Stamped & Decorative",
+          "url": "/services/decorative-stamped-concrete"
         },
         {
-          "name": "Floor Cleaning",
-          "url": "/services/floor-cleaning"
+          "name": "Retaining Walls",
+          "url": "/services/retaining-walls-structural"
+        },
+        {
+          "name": "Excavation & Site Prep",
+          "url": "/services/excavation-site-preparation"
         }
       ]
     }
