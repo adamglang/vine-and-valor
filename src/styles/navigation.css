@@ -44,7 +44,7 @@
 }
 
 #main-nav.is-stuck {
-  @apply fixed left-0 right-0 top-0 bg-body backdrop-blur-lg shadow;
+  @apply fixed left-0 right-0 top-0 bg-body backdrop-blur-lg shadow-[0_4px_12px_rgba(0,0,0,0.12)];
 }
 
 #main-nav.is-stuck .nav-phone {
