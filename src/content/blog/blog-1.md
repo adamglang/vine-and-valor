@@ -1,7 +1,7 @@
 ---
 title: "How North Idaho freeze-thaw eats weak concrete and how to pour something that lasts"
 meta_title: "Freeze-Thaw Concrete in North Idaho | Vine & Valor Solutions"
-description: "The mix design, air entrainment, curing, and sealing choices that separate a ten-year driveway from a fifty-year one in North Idaho's freeze-thaw climate."
+description: "The air entrainment, curing, and sealing choices that separate a ten-year driveway from a fifty-year one in North Idaho's freeze-thaw climate."
 date: 2026-01-22T05:00:00.000Z
 image: "/images/concrete/broom-finish-concrete-walkway-steps-home-entry.webp"
 categories:
@@ -15,7 +15,7 @@ If you've lived a few winters in Priest River, Sandpoint, or up at Priest Lake, 
 
 North Idaho runs through dozens of freeze-thaw cycles every winter. Water soaks into the pore structure of the slab during the day. It freezes at night, expands nine percent, and pries the slab apart from the inside. Do that fifty or a hundred times a year and a slab with no air entrainment will start spalling in three seasons.
 
-###### The mix design matters more than the contractor will admit
+###### The concrete matters more than the contractor will admit
 
 A good freeze-thaw mix has four things working together:
 

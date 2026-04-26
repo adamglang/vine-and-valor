@@ -12,7 +12,7 @@ contact_way:
   - icon: "FaLocationDot"
     value: "Based in Priest River, Idaho serving Sandpoint, Priest Lake, <br> Coeur d'Alene, Post Falls, Blanchard, Spirit Lake, Hayden, & Bonners Ferry"
   - icon: "FaClock"
-    value: "Mon–Fri: 7 AM – 6 PM <br> Saturday: By Appointment"
+    value: "Mon–Fri: 8 AM – 4 PM"
   - icon: "FaEnvelope"
     value: "info@vineandvalorsolutions.com"
   - icon: "FaShieldHalved"
