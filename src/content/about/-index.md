@@ -22,7 +22,7 @@ why_us:
     image: "/images/concrete/stamped-concrete-patio-fire-pit-forest-view.webp"
     bullet_points:
       - "Idaho-licensed concrete contractor, fully insured"
-      - "Mix designs engineered for North Idaho freeze-thaw"
+      - "Concrete engineered for North Idaho freeze-thaw"
       - "One crew from excavation to final seal"
       - "Straight estimates, no change-order games"
       - "Craft-grade finish work on every pour"

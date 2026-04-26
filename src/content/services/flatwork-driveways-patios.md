@@ -14,7 +14,7 @@ draft: false
 
 Flatwork is the part of the property you walk, drive, and live on every day. Vine & Valor Solutions pours **concrete driveways, sidewalks, patios, garage floors, basement floors, and pool decks** across North Idaho from Priest River and Sandpoint up to Bonners Ferry and down through Coeur d'Alene and Post Falls.
 
-We design each slab around how it'll actually be used: the weight of the trucks, the traffic of the kids, the freeze-thaw of the valley it sits in. Then we form, pour, finish, and seal it so it looks as good in year fifteen as it did the week we left.
+We design each slab around how it'll actually be used: the weight of the trucks, the traffic of the kids, the freeze-thaw of the valley it sits in. Then we form, pour, finish, and seal it so it looks as good as new for years to come.
 
 ###### Flatwork we pour
 

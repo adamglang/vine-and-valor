@@ -23,7 +23,7 @@ A crack wider than a credit card but not actively moving. We check for vertical 
 
 ###### Medium cracks, moving
 
-Cracks that are widening year over year, or showing freeze-thaw damage at the edges. These point to base failure or reinforcement issues. **Polyurethane slab lifting** (modern mudjacking) can stabilize the base; sometimes we add deck pins or inject epoxy. If the slab is thin or the reinforcement is wrong, we recommend replacement.
+Cracks that are widening year over year, or showing freeze-thaw damage at the edges. These point to base failure or reinforcement issues. Sometimes we add deck pins or inject epoxy to stabilize the base. If the slab is thin or the reinforcement is wrong, we recommend replacement.
 
 ###### Structural cracks in walls
 
@@ -35,7 +35,7 @@ The top quarter-inch of the slab is popping off in patches, especially on drivew
 
 ###### Settlement
 
-The slab has dropped at one end or one corner. Doors that used to clear now drag. **Polyurethane foam injection** can lift a driveway or garage floor back into position for a fraction of the cost of replacement. We use this a lot on Panhandle soils.
+The slab has dropped at one end or one corner. Doors that used to clear now drag. Depending on the severity, we can sometimes stabilize and correct the issue. In many cases, replacement is the long-term answer.
 
 ###### When to replace outright
 

@@ -37,10 +37,10 @@ We're called to fix somebody else's foundation work every year. The pattern is t
 - **Under-reinforced footings** that crack at the corners.
 - **Poor drainage** that soaks the wall from outside for a decade until it fails.
 - **No frost protection** on the footing depth.
-- **Wrong mix design** for a climate that pours into freezing nights.
+- **Wrong concrete spec** for a climate that pours into freezing nights.
 
 Fixing any one of those after the framing is up costs more than the original foundation would have at a craft-grade price.
 
 ---
 
-We give straight estimates with the mix design, reinforcement, and schedule spelled out in plain language. Call **1-208-304-3525** or request an estimate for your site in Priest River, Sandpoint, Coeur d'Alene, or anywhere in between.
+We give straight estimates with the reinforcement and schedule spelled out in plain language. Call **1-208-304-3525** or request an estimate for your site in Priest River, Sandpoint, Coeur d'Alene, or anywhere in between.

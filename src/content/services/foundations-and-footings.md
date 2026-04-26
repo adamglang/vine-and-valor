@@ -14,7 +14,7 @@ draft: false
 
 A concrete foundation is the one part of a home you never get to redo. Vine & Valor Solutions pours **slab-on-grade foundations, stem walls, frost footings, and full basement foundations** for new homes, additions, shops, and garages across Priest River, Sandpoint, Priest Lake, Coeur d'Alene, Post Falls, Blanchard, Spirit Lake, Hayden, and Bonners Ferry.
 
-Every footing and wall is engineered for the freeze-thaw cycles North Idaho hands out: proper frost depth, drainage, reinforcement, and a mix design that cures hard and stays square.
+Every footing and wall is engineered for the freeze-thaw cycles North Idaho hands out: proper frost depth, drainage, reinforcement, and concrete that cures hard and stays square.
 
 ###### What's included
 

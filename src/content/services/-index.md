@@ -10,7 +10,7 @@ home_title: "**Concrete work** for homes and job sites, start to finish"
 subtitle: "A LICENSED IDAHO CONCRETE CONTRACTOR"
 descriptions:
   - "Vine & Valor Solutions pours foundations, driveways, stamped patios, retaining walls, and decorative flatwork across Priest River, Sandpoint, Priest Lake, Coeur d'Alene, Post Falls, and every town in between."
-  - "We own the project from grade to final seal. One crew, one standard, mix designs engineered for North Idaho winters."
+  - "We own the project from grade to final seal. One crew, one standard, engineered for North Idaho winters."
 
 process:
   title: "How we build <br> **every pour**, every time"

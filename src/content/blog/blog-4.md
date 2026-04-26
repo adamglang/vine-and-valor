@@ -6,7 +6,7 @@ date: 2026-03-06T05:00:00.000Z
 image: "/images/concrete/stamped-concrete-walkway-sealed-finish.webp"
 categories:
   - Specialty
-draft: false
+draft: true
 ---
 
 ### Somewhere between "luxury" and "infrastructure"
