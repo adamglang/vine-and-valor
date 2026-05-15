@@ -1,7 +1,6 @@
 ---
 import CustomButton from "@/components/CustomButton.astro";
 import CustomHeading from "@/components/CustomHeading.astro";
-import config from "@/config/config.json";
 import DynamicIcon from "@/helpers/DynamicIcon";
 import Base from "@/layouts/Base.astro";
 import { getListPage } from "@/lib/contentParser.astro";
@@ -12,8 +11,6 @@ const appointmentIndex = await getListPage("appointment", "-index");
 if (appointmentIndex.data.draft) {
   return Astro.redirect("/404");
 }
-const { appointment_form_action }: { appointment_form_action: string } =
-  config.params;
 const { title, subtitle, contact_way } = appointmentIndex.data;
 ---
 
@@ -41,11 +38,7 @@ const { title, subtitle, contact_way } = appointmentIndex.data;
             data-aos="fade-up-sm"
             data-aos-delay="100"
           >
-            <form action={appointment_form_action} method="POST">
-              <input type="hidden" name="_subject" value="New appointment request - Vine & Valor" />
-              <input type="hidden" name="_template" value="table" />
-              <input type="hidden" name="_captcha" value="true" />
-              <input type="hidden" name="_next" value="https://vineandvalorsolutions.com/?form=appointment-success" />
+            <form action="/api/appointment" method="POST">
               <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
               <div class="row">
                 <div class="col-12">
