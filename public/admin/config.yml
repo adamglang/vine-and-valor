@@ -59,8 +59,8 @@ collections:
               - { label: "Contact Form Endpoint", name: "contact_form_action", widget: "string", hint: "FormSubmit or similar endpoint the contact form posts to." }
               - { label: "Appointment Form Endpoint", name: "appointment_form_action", widget: "string" }
               - { label: "Contact Email", name: "contact_email", widget: "string" }
-              - { label: "Contact Phone (display)", name: "contact_phone", widget: "string", hint: "Formatted for humans, e.g. 1-208-304-3525." }
-              - { label: "Contact Phone (tel: link)", name: "contact_phone_tel", widget: "string", hint: "Digits with country code, e.g. +12083043525." }
+              - { label: "Contact Phone (display)", name: "contact_phone", widget: "string", hint: "Formatted for humans, e.g. 1-208-290-6959." }
+              - { label: "Contact Phone (tel: link)", name: "contact_phone_tel", widget: "string", hint: "Digits with country code, e.g. +12082906959." }
               - { label: "License Text", name: "license_text", widget: "string" }
               - { label: "Address", name: "address", widget: "string" }
               - { label: "Footer Description", name: "footer_description", widget: "text", hint: "HTML allowed. Use <br> for line breaks." }

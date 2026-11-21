@@ -37,4 +37,4 @@ If you shovel, plow, or hire out snow removal today, run the math. Chemical deic
 
 **Don't add it later.** Retrofit means tearing out the slab. If there's any chance you want snow-melt on a new pour, talk to us before the rebar goes in.
 
-Call **1-208-304-3525** or request an estimate for a heated driveway, heated walkway, or snow-melt entry.
+Call **1-208-290-6959** or request an estimate for a heated driveway, heated walkway, or snow-melt entry.

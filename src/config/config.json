@@ -20,8 +20,8 @@
     "contact_form_action": "https://formsubmit.co/info@vineandvalorsolutions.com",
     "appointment_form_action": "https://formsubmit.co/info@vineandvalorsolutions.com",
     "contact_email": "info@vineandvalorsolutions.com",
-    "contact_phone": "1-208-304-3525",
-    "contact_phone_tel": "+12083043525",
+    "contact_phone": "1-208-290-6959",
+    "contact_phone_tel": "+12082906959",
     "license_text": "Idaho Licensed Concrete Contractor",
     "address": "Priest River, Idaho",
     "footer_description": "Craftsman concrete contractor serving North Idaho <br> foundations, flatwork, decorative concrete, and more.",
@@ -31,8 +31,8 @@
   "notification": {
     "enable": true,
     "message": "Free estimates across North Idaho.",
-    "link": "tel:+12083043525",
-    "label": "Call Us: 1-208-304-3525",
+    "link": "tel:+12082906959",
+    "label": "Call Us: 1-208-290-6959",
     "icon": "FaPhone"
   },
 

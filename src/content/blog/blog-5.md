@@ -36,4 +36,4 @@ More. You're paying for the boards (often once, sometimes only once depending on
 
 If the wall is going to live in front of the house, in the entry courtyard, or as the landscape architecture of a lakefront property yes. For a behind-the-shop retaining wall, a broom finish and a good sealer will serve you fine.
 
-Talk to us about board-formed walls on your next project. **1-208-304-3525**.
+Talk to us about board-formed walls on your next project. **1-208-290-6959**.

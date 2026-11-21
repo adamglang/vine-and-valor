@@ -6,8 +6,8 @@ content: "Foundations, driveways, stamped patios, retaining walls, or repair <br
 image: "/images/concrete/stamped-concrete-patio-fire-pit-forest-view.webp"
 buttons:
   - enable: true
-    label: "Call: 1-208-304-3525"
-    link: "tel:+12083043525"
+    label: "Call: 1-208-290-6959"
+    link: "tel:+12082906959"
 
   - enable: true
     label: "Request an Estimate"

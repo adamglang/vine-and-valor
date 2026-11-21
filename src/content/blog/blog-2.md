@@ -48,4 +48,4 @@ Pavers are individually placed on a compacted base. A single cracked paver can b
 
 For a mountain cabin, a lakefront property, or a custom home where the patio is part of the architecture **stamped concrete wins most of the time** on both look and longevity. For a courtyard where you want to pull pieces up periodically (buried utilities, planters, design changes), pavers still have a role.
 
-Want us to walk your project and give you the straight answer for your site? **1-208-304-3525**.
+Want us to walk your project and give you the straight answer for your site? **1-208-290-6959**.

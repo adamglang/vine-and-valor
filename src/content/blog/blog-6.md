@@ -46,4 +46,4 @@ The slab has dropped at one end or one corner. Doors that used to clear now drag
 
 ---
 
-If you're looking at a driveway, patio, foundation, or shop floor and not sure which column it falls into, have us take a look. Site visits are free across North Idaho. Call **1-208-304-3525**.
+If you're looking at a driveway, patio, foundation, or shop floor and not sure which column it falls into, have us take a look. Site visits are free across North Idaho. Call **1-208-290-6959**.
