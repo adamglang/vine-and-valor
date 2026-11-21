@@ -12,8 +12,8 @@ why_us:
     content: "We're a Priest River, Idaho concrete contractor pouring foundations, flatwork, stamped patios, retaining walls, and decorative concrete across the Panhandle. One crew, one standard, and a phone that the owner answers."
     button:
       enable: true
-      label: "Call: 1-208-304-3525"
-      link: "tel:+12083043525"
+      label: "Call: 1-208-290-6959"
+      link: "tel:+12082906959"
     image: "/images/concrete/concrete-foundation-footing-pour-crew.webp"
     overlay_image: "/images/concrete/poured-concrete-steps-board-formed-retaining-wall.webp"
 

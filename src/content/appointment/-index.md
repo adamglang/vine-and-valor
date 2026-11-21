@@ -8,7 +8,7 @@ draft: false
 subtitle: "BOOK A CONCRETE ESTIMATE"
 contact_way:
   - icon: "FaPhone"
-    value: "1-208-304-3525"
+    value: "1-208-290-6959"
   - icon: "FaLocationDot"
     value: "Based in Priest River, Idaho serving Sandpoint, Priest Lake, <br> Coeur d'Alene, Post Falls, Blanchard, Spirit Lake, Hayden, & Bonners Ferry"
   - icon: "FaClock"
