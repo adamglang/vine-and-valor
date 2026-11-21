@@ -4,8 +4,8 @@ hero:
   subtitle: "VINE & VALOR SOLUTIONS LICENSED IDAHO CONCRETE CONTRACTOR"
   buttons:
     - enable: true
-      label: "Call: 1-208-304-3525"
-      link: "tel:+12083043525"
+      label: "Call: 1-208-290-6959"
+      link: "tel:+12082906959"
       icon: "FaPhone"
     - enable: true
       label: "Request an Estimate"
@@ -27,8 +27,8 @@ about:
       time: "8 AM – 4 PM"
   button:
     enable: true
-    label: "Call: 1-208-304-3525"
-    link: "tel:+12083043525"
+    label: "Call: 1-208-290-6959"
+    link: "tel:+12082906959"
   badge: "/images/logos/vine-and-valor-logo-blue-white-transparent.png"
   images:
     - "/images/concrete/concrete-foundation-footing-pour-crew.webp"

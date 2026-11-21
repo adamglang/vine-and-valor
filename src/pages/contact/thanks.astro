@@ -1,0 +1,51 @@
+---
+import CustomButton from "@/layouts/components/CustomButton.astro";
+import CustomHeading from "@/layouts/components/CustomHeading.astro";
+import Base from "@/layouts/Base.astro";
+import CallToAction from "@/partials/CallToAction.astro";
+---
+
+<Base
+  title="Thank You"
+  meta_title="Thank You | Vine & Valor Solutions"
+  description="Your message has been sent. We'll be in touch soon."
+>
+  <section class="section mt-24 sm:mt-20">
+    <div class="container">
+      <div class="mx-auto max-w-2xl text-center">
+        <div
+          class="text-primary mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10"
+          aria-hidden="true"
+        >
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M12 0C18.6274 0 24 5.37258 24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12C0 5.37258 5.37258 0 12 0ZM10.4485 16.4485L17.6485 9.24853C18.1172 8.7799 18.1172 8.0201 17.6485 7.55147C17.1799 7.08284 16.4201 7.08284 15.9515 7.55147L9.6 13.9029L8.04853 12.3515C7.5799 11.8828 6.8201 11.8828 6.35147 12.3515C5.88284 12.8201 5.88284 13.5799 6.35147 14.0485L8.75147 16.4485C9.2201 16.9172 9.9799 16.9172 10.4485 16.4485Z"
+              fill="currentColor"></path>
+          </svg>
+        </div>
+
+        <CustomHeading
+          as="h1"
+          text="Message sent!"
+          class="text-h2 lg:text-h1 mb-4"
+          dataAos="fade-up-sm"
+        />
+
+        <p class="text-text/80 mb-8 text-lg" data-aos="fade-up-sm" data-aos-delay="80">
+          Thanks for reaching out. We've received your message and will get back to
+          you soon.
+        </p>
+
+        <div
+          class="flex flex-col items-center justify-center gap-4 sm:flex-row"
+          data-aos="fade-up-sm"
+          data-aos-delay="120"
+        >
+          <CustomButton label="Back to Home" link="/" variant="primary" />
+          <CustomButton label="Send Another Message" link="/contact" variant="secondary" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <CallToAction />
+</Base>

@@ -38,4 +38,4 @@ A penetrating sealer (silane or siloxane, not a topical) keeps liquid water from
 
 ---
 
-If you're planning a driveway, patio, shop slab, or foundation in the Panhandle, this is exactly the conversation we have on site. Call **1-208-304-3525** or request an estimate and we'll walk the project with you.
+If you're planning a driveway, patio, shop slab, or foundation in the Panhandle, this is exactly the conversation we have on site. Call **1-208-290-6959** or request an estimate and we'll walk the project with you.

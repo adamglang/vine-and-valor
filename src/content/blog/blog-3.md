@@ -43,4 +43,4 @@ Fixing any one of those after the framing is up costs more than the original fou
 
 ---
 
-We give straight estimates with the reinforcement and schedule spelled out in plain language. Call **1-208-304-3525** or request an estimate for your site in Priest River, Sandpoint, Coeur d'Alene, or anywhere in between.
+We give straight estimates with the reinforcement and schedule spelled out in plain language. Call **1-208-290-6959** or request an estimate for your site in Priest River, Sandpoint, Coeur d'Alene, or anywhere in between.
